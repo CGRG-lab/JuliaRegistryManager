@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Please modify registry_name_or_path and make sure the LocalRegistry is added to @v#.# julia environment
+julia -e '
+  using LocalRegistry
+
+  registry_name_or_path = "change here!!!"
+
+  register(pwd(); registry=registry_name_or_path, push=true)'
+
+exit 0
